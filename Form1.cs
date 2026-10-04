@@ -84,6 +84,25 @@ namespace ImageProcessor
             pictureBox2.Image = processed;
         }
 
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+            BasicDIP.ImageProcess.Equalisation(ref loaded, ref processed, trackBar2.Value);
+            pictureBox2.Image = processed;
+        }
+
+        private void mirrorHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BasicDIP.ImageProcess.Fliphorizontal(ref loaded, ref processed);
+            pictureBox2.Image = processed;
+        }
+
+        private void mirrorVerticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BasicDIP.ImageProcess.FlipVertical(ref loaded, ref processed);
+            pictureBox2.Image = processed;
+        }
+
         private void greyScalingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             processed = new Bitmap(loaded.Width, loaded.Height);
