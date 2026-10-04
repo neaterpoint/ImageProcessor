@@ -23,7 +23,7 @@ namespace BasicDIP
 
         }
 
-        public static void Fliphorizontal(ref Bitmap a, ref Bitmap b)
+        public static void FlipVertical(ref Bitmap a, ref Bitmap b)
         {
             b = new Bitmap(a.Width, a.Height);
             for (int x = 0; x < a.Width; x++)
@@ -38,7 +38,7 @@ namespace BasicDIP
 
         }
 
-        public static void FlipVertical(ref Bitmap a, ref Bitmap b)
+        public static void Fliphorizontal(ref Bitmap a, ref Bitmap b)
         {
             b = new Bitmap(a.Width, a.Height);
             for (int x = 0; x < a.Width; x++)
