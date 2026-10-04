@@ -103,6 +103,13 @@ namespace ImageProcessor
             pictureBox2.Image = processed;
         }
 
+
+        private void trackBar3_Scroll(object sender, EventArgs e)
+        {
+            BasicDIP.ImageProcess.Rotate(ref loaded, ref processed, trackBar3.Value);
+            pictureBox2.Image = processed;
+        }
+
         private void greyScalingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             processed = new Bitmap(loaded.Width, loaded.Height);
